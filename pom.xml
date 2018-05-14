@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xinktech.api</groupId>
+    <artifactId>emokit_api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>emokit_api</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.7</maven.compiler.source>
+      <maven.compiler.target>1.7</maven.compiler.target>
+      <java.version>1.8</java.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>${java.version}</maven.compiler.source>
+      <maven.compiler.target>${java.version}</maven.compiler.target>
+      <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
+      <swagger.version>2.6.1</swagger.version>
+      <!--<mybatis.version>3.4.4</mybatis.version>-->
+      <!--<mysql.connector>6.0.6</mysql.connector>-->
+      <!--<mysql.connector>5.1.38</mysql.connector>-->
+    </properties>
+
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-dependencies</artifactId>
+          <version>${spring-boot.version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+      <!-- spring boot dependency -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-logging</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+      </dependency>
+      <!--<dependency>-->
+      <!--<groupId>org.mybatis.spring.boot</groupId>-->
+      <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+      <!--<version>1.1.1</version>-->
+      <!--</dependency>-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-cache</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>2.10.3</version>
+      </dependency>
+      <!--apache commons-->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>4.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>${swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.sourceforge.jexcelapi</groupId>
+        <artifactId>jxl</artifactId>
+        <version>2.6.12</version>
+      </dependency>
+      <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-security</artifactId>-->
+      <!--</dependency>-->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.7.0</version>
+      </dependency>
+      <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
+      <!--</dependency>-->
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.7</version>
+      </dependency>
+    </dependencies>
+    <build>
+      <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+        <plugins>
+          <plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.0.0</version>
+          </plugin>
+          <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+          <plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.0.2</version>
+          </plugin>
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+          </plugin>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20.1</version>
+          </plugin>
+          <plugin>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+          </plugin>
+          <plugin>
+            <artifactId>maven-install-plugin</artifactId>
+            <version>2.5.2</version>
+          </plugin>
+          <plugin>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.8.2</version>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+    </build>
+  </project>
